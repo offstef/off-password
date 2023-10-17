@@ -32,3 +32,14 @@ python offpsswd.py
 #### Disclaimer:
 
 - Esta versión es open source y debe usarse con precaución.
+
+#### Opcional:
+
+- Esto sirve para crear un .bat que ejecute el script solo.
+- Se crea un archivo de texto, se copia este código y se siguen las instrucciones de las comillas.
+
+```bat
+@echo off
+"Path where your Python exe is stored\python.exe" "Path where your Python script is stored\script_name.py"
+pause
+```
