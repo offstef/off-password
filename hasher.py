@@ -32,4 +32,14 @@ def decode_password(base64_string_concat):
     mod_password = password[:-64]
     
     base64_bytes = mod_password.encode("utf-8")
+
+def hash_master_password(master_password):
+    encode_master_password_ascii = master_password.encode("utf-8")
+    base64_bytes = base64.b64encode(encode_master_password_ascii)
+    encode_master_password = base64_bytes.decode("utf-8")
     
+    result = hashlib.sha256(encode_master_password.encode())
+
+    # returning the equivalent hexadecimal value.
+    hex_result = result.hexdigest()
+    return hex_result
