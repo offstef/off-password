@@ -32,6 +32,12 @@ def decode_password(base64_string_concat):
     mod_password = password[:-64]
     
     base64_bytes = mod_password.encode("utf-8")
+    
+    password_ascii = base64.b64decode(base64_bytes)
+    password = password_ascii.decode("utf-8")
+    
+    return password
+
 
 def hash_master_password(master_password):
     encode_master_password_ascii = master_password.encode("utf-8")
