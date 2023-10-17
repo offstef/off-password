@@ -3,6 +3,7 @@ from stdiomask import getpass
 import json
 import elara
 import hashlib
+import pyfiglet
 
 from hasher import decode_password, encode_password, hash_master_password
 from crud import new_password, view_password, delete_password, update_password
@@ -28,11 +29,8 @@ def main():
     verify_master_password_unhashed = getpass(prompt = "Introduce la contraseña maestra - ", mask = '*' )
     verify_master_password = hash_master_password(verify_master_password_unhashed)
     if verify_master_password == db.get("Masterpassword"): 
-        print("       __  __  ____")
-        print("  ___ / _|/ _|/ / /")
-        print(" / _ \  _|  _/ / / ")
-        print(" \___/_| |_|/_/_/  ")
-        print("                   ")
+        ascii_banner = pyfiglet.figlet_format("OFF//", font="big")
+        print(ascii_banner)
         while(1):
             print(" ")
             print("1. Agregar contraseña")
