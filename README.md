@@ -43,3 +43,8 @@ python offpsswd.py
 "Path where your Python exe is stored\python.exe" "Path where your Python script is stored\script_name.py"
 pause
 ```
+
+##### Muy opcional
+
+- Al crear el .bat puedes moverlo a otra carpeta para crear más gestores de contraseñas
+- Es muy útil si quieres tener uno para uso personal y otro para empresarial.
